@@ -56,7 +56,7 @@ int main() {
 		float magicDamage = fireballPower * (1 - magicResistance);
 		orcHealth -= magicDamage;
 
-		std::cout << "Орку нанесён урон " << magicDamage << ", у него осталось " << orcHealth << " здоровья." << std::endl;
+		if (orcHealth > 0) std::cout << "Орку нанесён урон " << magicDamage << ", у него осталось " << orcHealth << " здоровья." << std::endl;
 	 } 
 
 	std::cout << "Орк погиб!" << std::endl;
