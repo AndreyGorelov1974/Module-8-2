@@ -43,7 +43,7 @@ int main() {
 	}
 
 
-	while (orcHealth > 0) {
+	 do {
 
 		std::cout << "Введите мощность огненного шара (вещественное число от 0 до 1): ";
 		float fireballPower;
@@ -51,12 +51,13 @@ int main() {
 		while (fireballPower < 0 || fireballPower > 1) {
 			std::cout << "Число должно быть в диапазон от 0 до 1. Введите снова: ";
 			std::cin >> fireballPower;
-		}
+		} 
+
 		float magicDamage = fireballPower * (1 - magicResistance);
 		orcHealth -= magicDamage;
 
 		std::cout << "Орку нанесён урон " << magicDamage << ", у него осталось " << orcHealth << " здоровья." << std::endl;
-	}
+	 } while (orcHealth > 0);
 
 	std::cout << "Орк погиб!" << std::endl;
 }
